@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - M.A.Mobeen Traders</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0A4174 0%, #1a5a8f 100%); }
+        .btn-primary { background: linear-gradient(135deg, #0A4174 0%, #1a5a8f 100%); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(10, 65, 116, 0.3); }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-padding { padding: 80px 0; }
+        .container-custom { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #0A4174; }
+        .nav-link.active { color: #0A4174; font-weight: 600; }
+        .form-input { transition: all 0.3s ease; }
+        .form-input:focus { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(10, 65, 116, 0.15); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-lg">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                                     <a href="index.html" class="flex items-center space-x-2">
+                         <img src="M.A.Mobeen Traders logo.png" alt="M.A.Mobeen Traders Logo" class="w-10 h-10 rounded-lg">
+                         <span class="text-xl lg:text-2xl font-bold text-gray-900">
+                             M.A.Mobeen Traders
+                         </span>
+                     </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium text-gray-700">Home</a>
+                    <a href="product.html" class="nav-link font-medium text-gray-700">Products</a>
+                    <a href="service.html" class="nav-link font-medium text-gray-700">Services</a>
+                    <a href="about.html" class="nav-link font-medium text-gray-700">About</a>
+                    <a href="contact.html" class="nav-link active font-medium text-gray-700">Contact</a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 300 4403668</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                        <i class="fas fa-envelope"></i>
+                        <span>abdulsaboormalik10@gmail.com</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+                <div class="px-4 py-6 space-y-4">
+                                         <a href="index.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">Home</a>
+                     <a href="product.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">Products</a>
+                     <a href="service.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">Services</a>
+                     <a href="about.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">About</a>
+                     <a href="contact.html" class="block font-medium text-gray-700">Contact</a>
+                    <div class="pt-4 border-t border-gray-200 space-y-2">
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fas fa-phone"></i>
+                            <span>+92 300 4403668</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fas fa-envelope"></i>
+                            <span>abdulsaboormalik10@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg section-padding pt-32">
+        <div class="container-custom">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">
+                    Get in <span class="text-red-600" style="text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">Touch</span>
+                </h1>
+                <p class="text-xl text-blue-100 leading-relaxed">
+                    Ready to discuss your packaging needs? Contact us today and let's create the perfect corrugated solution for your business.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                        Send us a Message
+                    </h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Full Name *
+                                </label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Your full name"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Email Address *
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="your.email@company.com"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Phone Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="+92 300 1234567"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Company Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="company"
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Your company name"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Product Interest
+                            </label>
+                            <select
+                                name="productInterest"
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                                <option value="">Select a product</option>
+                                <option value="box-board">Corrugated Box Board</option>
+                                <option value="trays">Corrugated Trays</option>
+                                <option value="rolls">Corrugated Rolls</option>
+                                <option value="custom">Custom Solutions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Message *
+                            </label>
+                            <textarea
+                                name="message"
+                                required
+                                rows="6"
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Tell us about your packaging needs..."
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 w-full"
+                        >
+                            Send Message
+                        </button>
+                        
+                        <button
+                            type="button"
+                            onclick="openWhatsApp()"
+                            class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                        >
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Chat on WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                        Contact Information
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                                <p class="text-gray-600 font-medium mb-1">+92 300 4403668</p>
+                                <p class="text-gray-500 text-sm">Call us for immediate assistance</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                                <p class="text-gray-600 font-medium mb-1">abdulsaboormalik10@gmail.com</p>
+                                <p class="text-gray-500 text-sm">Send us an email anytime</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors" onclick="openWhatsApp()">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h3>
+                                <p class="text-gray-600 font-medium mb-1">+92 300 4403668</p>
+                                <p class="text-gray-500 text-sm">Chat with us on WhatsApp</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Address</h3>
+                                <p class="text-gray-600 font-medium mb-1">Manufacturing Plant, Industrial Zone</p>
+                                <p class="text-gray-500 text-sm">Visit our facility</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Business Hours</h3>
+                                <p class="text-gray-600 font-medium mb-1">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                <p class="text-gray-500 text-sm">Saturday: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                            Our Location
+                        </h3>
+                        <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                                </div>
+                                <p class="text-gray-600">
+                                    Manufacturing Plant<br />
+                                    Industrial Zone
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Catalogue Section -->
+    <section class="section-padding bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Download Our Product Catalogue
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get detailed information about our complete range of corrugated packaging solutions before contacting us.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center space-y-6">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-file-pdf text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">M.A.Mobeen Traders Catalogue</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive product guide featuring our complete range of corrugated solutions, technical specifications, and application examples.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-6">
+                            <li>• Complete product range with specifications</li>
+                            <li>• Technical data and material properties</li>
+                            <li>• Application examples and case studies</li>
+                            <li>• Contact information and ordering details</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="catalogue.pdf" download class="btn-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+                            <i class="fas fa-download mr-2"></i>
+                            Download PDF Catalogue
+                        </a>
+                        <button onclick="openWhatsApp()" class="btn-secondary text-gray-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Chat on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Find answers to common questions about our products and services.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        What is the minimum order quantity?
+                    </h3>
+                    <p class="text-gray-600">
+                        We offer flexible minimum order quantities to accommodate both small businesses and large-scale operations. Contact us for specific details.
+                    </p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        How long does production take?
+                    </h3>
+                    <p class="text-gray-600">
+                        Standard orders typically take 5-7 business days. Rush orders and custom solutions may require additional time.
+                    </p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        Do you offer custom designs?
+                    </h3>
+                    <p class="text-gray-600">
+                        Yes! We specialize in custom corrugated packaging solutions tailored to your specific requirements and brand guidelines.
+                    </p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        What are your payment terms?
+                    </h3>
+                    <p class="text-gray-600">
+                        We offer flexible payment terms including net 30 for qualified customers. Contact us to discuss payment options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">M</span>
+                        </div>
+                        <span class="text-xl font-bold">M.A.Mobeen Traders</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Premium corrugated packaging solutions for all industries. Quality, innovation, and sustainability at the core of everything we do.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://mamobeen.com" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fas fa-globe text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="product.html" class="text-gray-300 hover:text-blue-400 transition-colors">Products</a></li>
+                        <li><a href="service.html" class="text-gray-300 hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold">Our Products</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Corrugated Box Board</li>
+                        <li class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Corrugated Trays</li>
+                        <li class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Corrugated Rolls</li>
+                        <li class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Custom Packaging</li>
+                        <li class="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">Industrial Solutions</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-blue-400"></i>
+                            <span class="text-gray-300">+92 300 4403668</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <span class="text-gray-300">abdulsaboormalik10@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-blue-400"></i>
+                            <span class="text-gray-300">Manufacturing Plant, Industrial Zone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 M.A.Mobeen Traders. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // WhatsApp function
+        function openWhatsApp() {
+            const message = `Hello! I'm interested in your corrugated packaging solutions. Please contact me.`;
+            const whatsappUrl = `https://wa.me/923004403668?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
