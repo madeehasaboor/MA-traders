@@ -210,7 +210,7 @@
                         <p class="text-gray-600 mb-6">
                             Professional PDF format perfect for printing, sharing, and offline reference.
                         </p>
-                        <a href="catalogue.pdf" download class="bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-red-700 inline-block">
+                        <a href="catalogue.pdf" download="M.A.Mobeen_Traders_Catalogue.pdf" class="bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-red-700 inline-block">
                             📥 Download PDF
                         </a>
                     </div>
@@ -457,7 +457,7 @@
                         </ul>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="catalogue.pdf" download class="btn-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+                        <a href="catalogue.pdf" download="M.A.Mobeen_Traders_Catalogue.pdf" class="btn-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
                             <i class="fas fa-download mr-2"></i>
                             Download PDF Catalogue
                         </a>
@@ -565,6 +565,35 @@
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
+                });
+            });
+        });
+
+        // Enhanced PDF download function
+        function downloadPDF() {
+            const link = document.createElement('a');
+            link.href = 'catalogue.pdf';
+            link.download = 'M.A.Mobeen_Traders_Catalogue.pdf';
+            link.target = '_blank';
+            
+            // Try to trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Fallback: open in new tab if download doesn't work
+            setTimeout(() => {
+                window.open('catalogue.pdf', '_blank');
+            }, 1000);
+        }
+
+        // Add click event listeners to all PDF download links
+        document.addEventListener('DOMContentLoaded', function() {
+            const pdfLinks = document.querySelectorAll('a[href="catalogue.pdf"]');
+            pdfLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    downloadPDF();
                 });
             });
         });
