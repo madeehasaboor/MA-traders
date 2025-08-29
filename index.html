@@ -75,6 +75,9 @@
                     <a href="about.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">About</a>
                     <a href="contact.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">Contact</a>
                     <a href="catalogue.html" class="block font-medium text-gray-700 hover:text-[#0A4174]">Catalogue</a>
+                    <a href="catalogue.pdf" download="M.A.Mobeen_Traders_Catalogue_2024.pdf" class="block font-medium text-red-600 hover:text-red-700 bg-red-50 px-3 py-2 rounded-lg">
+                        📥 Download PDF Catalogue
+                    </a>
                     <div class="pt-4 border-t border-gray-200 space-y-2">
                         <div class="flex items-center space-x-2 text-sm text-gray-600">
                             <i class="fas fa-phone"></i>
@@ -105,8 +108,8 @@
                     <a href="product.html" class="btn-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block">
                         Explore Products
                     </a>
-                    <a href="catalogue.html" class="bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-red-700 inline-block">
-                        📥 Download Catalogue
+                    <a href="catalogue.pdf" download="M.A.Mobeen_Traders_Catalogue_2024.pdf" class="bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-red-700 inline-block">
+                        📥 Download PDF Catalogue
                     </a>
                     <a href="contact.html" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-gray-100 inline-block">
                         Get Quote
@@ -336,9 +339,9 @@
                         <p class="text-gray-600 mb-6">
                             Professional PDF format perfect for printing, sharing, and offline reference.
                         </p>
-                        <a href="catalogue.pdf" download class="bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-red-700 inline-block">
-                            📥 Download PDF
-                        </a>
+                                                 <a href="catalogue.pdf" download="M.A.Mobeen_Traders_Catalogue_2024.pdf" class="bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-red-700 inline-block">
+                             📥 Download PDF
+                         </a>
                     </div>
                     
                     <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
@@ -462,10 +465,10 @@
                         </ul>
                             </div>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="catalogue.pdf" download class="btn-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
-                            <i class="fas fa-download mr-2"></i>
-                            Download PDF Catalogue
-                        </a>
+                                                 <a href="catalogue.pdf" download="M.A.Mobeen_Traders_Catalogue_2024.pdf" class="btn-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+                             <i class="fas fa-download mr-2"></i>
+                             Download PDF Catalogue
+                         </a>
                         <a href="contact.html" class="btn-secondary text-gray-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
                             <i class="fas fa-envelope mr-2"></i>
                             Request Quote
@@ -557,7 +560,66 @@
         </div>
     </footer>
 
+    </script>
+
+    <!-- Floating Download Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="downloadPDF()" class="bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fas fa-download text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Download Script -->
     <script>
+        function downloadPDF() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = 'catalogue.pdf';
+            link.download = 'M.A.Mobeen_Traders_Catalogue_2024.pdf';
+            
+            // Add to document and trigger download
+            document.body.appendChild(link);
+            link.click();
+            
+            // Clean up
+            document.body.removeChild(link);
+            
+            // Show success message
+            showDownloadMessage();
+        }
+        
+        function showDownloadMessage() {
+            // Create a temporary success message
+            const message = document.createElement('div');
+            message.innerHTML = `
+                <div class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300">
+                    <i class="fas fa-check mr-2"></i>
+                    PDF Download Started!
+                </div>
+            `;
+            document.body.appendChild(message);
+            
+            // Remove message after 3 seconds
+            setTimeout(() => {
+                if (message.parentNode) {
+                    message.parentNode.removeChild(message);
+                }
+            }, 3000);
+        }
+        
+        // Add touch feedback for mobile devices
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButtons = document.querySelectorAll('a[href="catalogue.pdf"]');
+            downloadButtons.forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                button.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
